@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #e8edee;
+}
+
+.intro{
+  height: 100vh;
+}
+.intro video{
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.intro-button{
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.welcimg{
+  width: 100%;
+}
+.navbar{
+  padding: .8rem;
+}
+.navbar-nav li{
+  padding-right: 20px;
+}
+.nav-link{
+  font-size: 1.1em !important;
+}
+.leadspace{
+  height: 18px;
+}
+.profile-info{
+
+  margin: 40px;
+  text-align: justify;
+}
+.profile-media{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profile-media button{
+ margin-right: 100px;
+}
+.carousel-inner img{
+  width: 30%;
+}
+.carousel-caption{
+  text-align: center;
+}
+.carousel-caption h3{
+  text-shadow: 1px 1px 10px #000;
+}
+.welcome{
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.welcome h1{
+  text-align: center;
+}
+hr{
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+section#builds{
+  background: url(./img/background.png) no-repeat center center/
+  cover;
+}
+#hecate{
+  background: url(./img/background3.png) no-repeat center center/
+  cover;
+}
+
+.build-info{
+  padding: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.build-info-div{
+  background-color: rgba(0,0,0,0.5);
+  padding: 2%;
+  width: 50%;
+}
+.tittle{
+  color: #e8edee;
+}
+.tittle h1{
+  font-size: 400%;
+}
+.tittle h4{
+  font-size: 110%;
+}
+.info{
+  display: flex;
+
+}
+.parts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info h3{
+  color: #e8edee;
+  margin: 20px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.info h1{
+  color:#b4b4b4;
+  margin: 20px;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.info h2{
+  margin: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: rgb(255, 196, 0);
+}
+.info h2:hover{
+  font-weight: bolder;
+  color: rgb(255, 153, 0);
+}
+.info a{
+  text-decoration: none;
+}
+.buildmedia{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.buildmedia video{
+  margin-top: 40px;
+}
+.buildmedia img{
+  margin-top: 30px;
+  width: 700px;
+}
+
+
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+ body{
+   overflow-x: hidden;
+ }
+  .intro{
+    display: none;
+  }
+  .welcimg{
+    width: auto;
+    height: 130px;
+  }
+  .carousel-inner img{
+    width: 95%;
+  }
+  .carousel-caption{
+    text-align: center;
+  }
+  .carousel-caption h3{
+    text-shadow: 1px 1px 10px #000;
+  }
+  .welcome{
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .welcome h1{
+    text-align: center;
+    font-size: 230%;
+  }
+  .welcome hr{
+    border-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  .profile-media{
+    display: inline;
+
+  }
+  .profile-button{
+
+  margin-bottom: 20px;
+
+  }
+  .profile-info{
+
+    text-align: center;
+  }
+  .info img{
+    display: none;
+  }
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
